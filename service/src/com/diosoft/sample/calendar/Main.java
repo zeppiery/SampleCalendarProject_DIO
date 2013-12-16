@@ -17,13 +17,8 @@ public class Main {
     public static void main(String[] args) throws RemoteException {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        CalendarService service = (CalendarService) context.getBean("calendarService");
+        logger.info("Service started");
 
-        for (String name : args)
-            service.addEvent(name, name, null, null, null);
-
-        for (String name : args)
-            logger.info("Created event in data store: " + service.getEvent(name));
 
     }
 }

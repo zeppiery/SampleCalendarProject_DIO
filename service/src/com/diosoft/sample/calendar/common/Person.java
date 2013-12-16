@@ -1,6 +1,8 @@
 package com.diosoft.sample.calendar.common;
 
-public class Person {
+import java.io.Serializable;
+
+public class Person  implements Serializable {
 
     private final String firstName;
     private final String secondName;

@@ -1,12 +1,12 @@
 package com.diosoft.sample.calendar.common;
 
-import java.util.Date;
+import java.io.Serializable;
 import java.util.GregorianCalendar;
 import java.util.List;
 
 import static java.util.Arrays.asList;
 
-public class Event {
+public class Event implements Serializable {
 
     private final String name;
     private final String description;

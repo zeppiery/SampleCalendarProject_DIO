@@ -25,10 +25,11 @@
         <SOURCES>
           <root url="file://$MODULE_DIR$/lib" />
         </SOURCES>
-        <jarDirectory url="file://$MODULE_DIR$/../clint/lib" recursive="false" />
-        <jarDirectory url="file://$MODULE_DIR$/../clint/lib" recursive="false" type="SOURCES" />
+        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="service" />
   </component>
 </module>
 

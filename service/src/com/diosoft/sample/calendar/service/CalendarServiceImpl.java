@@ -7,11 +7,13 @@ import com.diosoft.sample.calendar.datastore.CalendarDataStore;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
+import java.util.logging.Logger;
 
 import static java.util.Arrays.asList;
 
 public class CalendarServiceImpl implements CalendarService {
 
+    public static final Logger logger = Logger.getAnonymousLogger();
     private final CalendarDataStore dataStore;
 
     public CalendarServiceImpl(CalendarDataStore dataStore) {
@@ -30,6 +32,8 @@ public class CalendarServiceImpl implements CalendarService {
                 .attenders(attenders)
                 .build()
         );
+
+        logger.info("Published even on service side " + name);
     }
 
     @Override
