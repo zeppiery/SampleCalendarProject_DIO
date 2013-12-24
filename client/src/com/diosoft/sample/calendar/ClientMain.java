@@ -19,7 +19,7 @@ public class ClientMain {
         String[] reservedCalendarNames = {"New Year", "Meeting10", "code review"};
 
         for (String name : reservedCalendarNames)
-            service.addEvent(name, name, null, null, null);
+            service.addEvent2(name, name, null, null, null);
 
         for (String name : reservedCalendarNames)
             logger.info("Created event in data store: " + service.getEvent(name));

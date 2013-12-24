@@ -4,9 +4,9 @@ import com.diosoft.sample.calendar.common.Event;
 
 public interface CalendarDataStore {
 
-    void publish(Event expectedEvent);
+    void publish(Event event);
 
-    Event remove(String inputName);
+    Event remove(String eventName);
 
     Event getEvent(String name);
 }

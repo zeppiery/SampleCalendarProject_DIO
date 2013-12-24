@@ -4,7 +4,6 @@ import com.diosoft.sample.calendar.common.Event;
 import com.diosoft.sample.calendar.common.Person;
 import com.diosoft.sample.calendar.datastore.CalendarDataStore;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import java.util.*;
 
@@ -38,7 +37,7 @@ public class CalendarServiceImplTest {
         CalendarService service = new CalendarServiceImpl(dataStore);
 
         // invoke method on class to test
-        service.addEvent(inputName,inputDescription, inputStartDate,inputEndDate,attenders);
+        service.addEvent2(inputName, inputDescription, inputStartDate, inputEndDate, attenders);
 
         // assert return value
 

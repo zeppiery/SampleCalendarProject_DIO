@@ -1,9 +1,5 @@
 package com.diosoft.sample.calendar;
 
-import com.diosoft.sample.calendar.datastore.CalendarDataStore;
-import com.diosoft.sample.calendar.datastore.CalendarDataStoreImpl;
-import com.diosoft.sample.calendar.service.CalendarService;
-import com.diosoft.sample.calendar.service.CalendarServiceImpl;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

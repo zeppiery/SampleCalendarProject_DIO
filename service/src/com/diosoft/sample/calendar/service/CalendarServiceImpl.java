@@ -22,7 +22,7 @@ public class CalendarServiceImpl implements CalendarService {
     }
 
     @Override
-    public void addEvent(String name, String description, GregorianCalendar startDate, GregorianCalendar endDate, List<Person> attenders) {
+    public void addEvent2(String name, String description, GregorianCalendar startDate, GregorianCalendar endDate, List<Person> attenders) {
 
         dataStore.publish(new Event.Builder()
                 .name(name)
