@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface CalendarDataStore {
-
+    
     void publish(Event event);
     //void addEvent(Event event);
 
