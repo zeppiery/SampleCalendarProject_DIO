@@ -43,6 +43,11 @@ public class CalendarServiceImpl implements CalendarService {
     }
 
     @Override
+    public Event search(String name) {
+        return dataStore.search(name);
+    }
+
+    @Override
     public Event getEvent(String name) {
         return dataStore.getEvent(name);
     }

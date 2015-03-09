@@ -56,7 +56,8 @@ public class CalendarServiceImplTest {
 
         // initialize mocks
         CalendarDataStore dataStore = mock(CalendarDataStore.class);
-        when(dataStore.remove(inputName)).thenReturn(expectedEvent);
+        when(dataStore.remove(inputName))
+                .thenReturn(expectedEvent);
 
         // initialize class to test
         CalendarService service = new CalendarServiceImpl(dataStore);
@@ -226,4 +227,38 @@ public class CalendarServiceImplTest {
         // verify mock expectations
         verify(dataStore).publish(expectedNewEvent);
     }
+
+    @Test
+    public void testSearchEvent() throws Exception {
+        // initialize variable inputs
+        GregorianCalendar inputStartDate = new GregorianCalendar(2008, Calendar.APRIL,Calendar.TUESDAY,10, 12);
+        GregorianCalendar inputEndDate = new GregorianCalendar(2008, Calendar.APRIL,Calendar.TUESDAY,10, 12);
+        String inputName = "sampleEvent";
+        String inputDescription = "sampleEventDescription";
+        Person inputPerson = new Person.Builder().firstName("aName").build();
+        List<Person> attenders = Arrays.asList(inputPerson);
+
+        Event expectedEvent = new Event.Builder()
+                .name(inputName)
+                .description(inputDescription)
+                .startTime(inputStartDate)
+                .endTime(inputEndDate)
+                .attenders(attenders)
+                .build();
+
+        // initialize mocks
+        CalendarDataStore dataStore = mock(CalendarDataStore.class);
+        when(dataStore.search(inputName)).thenReturn(expectedEvent);
+
+        // initialize class to test
+        CalendarService service = new CalendarServiceImpl(dataStore);
+
+        // invoke method on class to test
+        Event returnValue = service.search(inputName);
+
+        // assert return value
+        assertEquals(expectedEvent, returnValue);
+
+    }
+
 }
